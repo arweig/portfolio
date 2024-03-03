@@ -1,0 +1,76 @@
+---
+import Icon from "./global/flair/Icon.astro";
+import Logo from "./global/flair/Logo.astro";
+import Link from "./global/interactive/Link.astro";
+---
+
+<footer>
+  <div class="container">
+    <Logo text="A" href="/" style=""/>
+    <div id="icon-container">
+      <Icon href="http://linkedin.com/in/arweig" style="fa-brands fa-linkedin" size="md" />
+      <Icon href="http://linkedin.com/in/arweig" style="fa-brands fa-github" size="md" />
+    </div>
+    <p id="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, deserunt! Natus voluptates odit libero non..
+      <br>
+      <Link href="mailto:hello@alyssa.com" text="hello@alyssa.com" style="plain-text"/>
+    </p>
+    <ul>
+      <li>Navigate</li>
+      <li><Link href="#about" text="About" style="plain-text"/></li>
+      <li><Link href="#projects" text="Projects" style="plain-text"/></li>
+      <li><Link href="#contact" text="Contact" style="plain-text"/></li>
+    </ul>
+    <ul>
+      <li>Projects</li>
+      <li><Link href="#project-1" text="Project 1" style="plain-text"/></li>
+      <li><Link href="#project-2" text="Project 2" style="plain-text"/></li>
+      <li><Link href="#project-3" text="Project 3" style="plain-text"/></li>
+      <li><Link href="#project-4" text="Project 4" style="plain-text"/></li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+  }
+
+  footer .container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+
+  #icon-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: 1 / 2 / 2 / 4;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li:first-of-type {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 800px) {
+    footer .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #icon-container { 
+      grid-area: 1 / 2 / 2 / 3; 
+    }
+
+    #description {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+  }
+</style>

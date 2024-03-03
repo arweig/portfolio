@@ -1,0 +1,36 @@
+---
+import Link from './global/interactive/Link.astro';
+import Logo from './global/flair/Logo.astro';
+---
+<div id="navbar">
+  <div class="container">
+    <Logo text="A" href="/" style=""/>
+    <nav>
+      <ul>
+        <li><i class="fa-solid fa-moon"></i></li>
+        <li><Link href="#about" style="plain-text" text="About" /></li>
+        <li><Link href="#projects" style="plain-text" text="Projects" /></li>
+        <li><Link href="#contact" style="primary-btn" text="Contact" /></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<style>
+  #navbar {
+  }
+
+  #navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+import Icon from '../../../components/global/flair/Icon.astro';
+
+interface Props {
+	title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<section class="project">
+  <img src="https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-04.jpg"/>
+  <div class="title-container">
+    <h3>{title}</h3>
+    <div class="icon-container">
+      <Icon 
+        style="fa-solid fa-code" 
+        size="sm" 
+        href="http://github.com/arweig" 
+      />
+      <Icon 
+        style="fa-solid fa-link" 
+        size="sm" 
+        href="http://github.com/arweig" 
+      />
+    </div>
+  </div>
+  <p>{description}</p>
+</section>
+
+<style>
+  .project {
+  }
+  
+  h3 {
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+</style>

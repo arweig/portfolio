@@ -1,0 +1,27 @@
+---
+import Icon from '../../../components/global/flair/Icon.astro';
+import Link from '../../global/interactive/Link.astro';
+---
+<section id="hero">
+  <div class="container">
+    <h2>I build and maintain software applications.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nesciunt sunt quod rem at voluptate odio a aliquam aspernatur eligendi!</p>
+    <Link href="#projects" text="See my work" style="secondary-btn" />
+  </div>  
+</section>
+
+<style>
+  #hero {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+</style>

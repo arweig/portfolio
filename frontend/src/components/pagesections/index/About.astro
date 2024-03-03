@@ -1,0 +1,98 @@
+---
+import Title from "../../global/titles/Title.astro";
+import Tech from '../../../components/global/flair/Tech.astro';
+import Badges from '../index/Badges.astro';
+---
+
+<section id="about">
+  <div class="container">
+    <Title text="About" />
+    <p>Hey there, I'm Alyssa, a software engineer in the PNW. 
+      My primary focus is on the intricate process of constructing and sustaining 
+      software applications. This involves not only the initial development stages 
+      but also the ongoing maintenance and optimization to ensure the longevity and 
+      effectiveness of the software. Through a combination of innovative coding, 
+      problem-solving, and a commitment to staying updated on the latest technologies, 
+      I strive to create robust and scalable solutions that meet the evolving needs 
+      of users and businesses alike. In essence, my role extends beyond mere creation, 
+      encompassing the responsibility of nurturing and fine-tuning software applications 
+      throughout their lifecycle.
+    </p>
+  
+    <section id="tech-container">
+      <h4 id=tech-title>Toolbox</h4>
+      <Tech style="fa-brands fa-java" text="Java"/>
+      <Tech style="fa-brands fa-js" text="JavaScript" />
+      <Tech style="fa-brands fa-react" text="React" />
+      <Tech style="devicon-astro-plain" text="Astro" />
+      <Tech style="devicon-vitejs-plain" text="ViteJs" />
+      <Tech style="fa-brands fa-html5" text="HTML5" />
+      <Tech style="fa-brands fa-css3-alt" text="CSS3" />
+      <Tech style="fa-brands fa-sass" text="Sass" />
+      <Tech style="devicon-figma-plain" text="Figma" />
+      <Tech style="devicon-photoshop-plain" text="Photoshop" />
+      <Tech style="fa-solid fa-folder-open" text="MySQL" />
+      <Tech style="devicon-mongodb-plain" text="MongoDB" />
+      <Tech style="fa-brands fa-git-alt" text="Git" />
+      <Tech style="devicon-bash-plain" text="Bash" />
+      <Tech style="devicon-jest-plain" text="Jest" />
+      <Tech style="devicon-postman-plain" text="Postman" />
+      <Tech style="devicon-amazonwebservices-plain-wordmark" text="AWS" />
+      <Tech style="devicon-netlify-plain" text="Netlify" />
+      <Tech style="devicon-spring-original" text="Spring Boot" />
+      <Tech style="devicon-maven-plain" text="Maven" />
+      <Tech style="fa-brands fa-python" text="Python" />
+      <Tech style="devicon-azuresqldatabase-plain" text="SQL" />
+      <Tech style="devicon-nodejs-plain" text="Node.js" />
+      <Tech style="devicon-express-original" text="Express" />
+      <Tech style="devicon-junit-plain-wordmark" text="Junit" />
+    </section>
+
+    
+    <section id="education-container">
+      <h4>Education</h4>
+      <p>B.S., Computer Science</p>
+      <p>Western Governors University</p>
+      <p>2025</p>
+    </section>
+
+    <section id="certification-container">
+      <h4>Certification</h4>
+      <Badges />
+    </section>
+
+  </div>
+</section>
+
+<style>
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #tech-container {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  #tech-title { 
+    grid-area: 1 / 1 / 2 / 4; 
+  }
+  #tech-container, #education-container, #certification-container {
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    #tech-container {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 334px;
+    }
+    #tech-title { 
+      grid-area: 1 / 1 / 2 / 3;
+    }
+  }
+</style>

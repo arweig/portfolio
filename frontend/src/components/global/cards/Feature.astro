@@ -1,0 +1,21 @@
+---
+import Icon from '../../../components/global/flair/Icon.astro';
+
+interface Props {
+	title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="feature">
+  <h4>{title}</h4>
+  <p>{description}</p>
+</section>
+
+<style>
+  p {
+    font-size: 12px;
+  }
+</style>

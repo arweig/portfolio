@@ -1,0 +1,36 @@
+---
+interface Props {
+  style: string;
+  href: string;
+  size: string;
+}
+
+const { style, href, size } = Astro.props;
+---
+
+<a href={href} target="_blank" class={size}>
+  <i class={style}></i>
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  i {
+    color: rgb(0, 0, 0);
+  }
+  
+  .sm {
+    font-size: 12px;
+  }
+
+  .md {
+    font-size: 24px;
+  }
+
+  .lg {
+    font-size: 40px;
+  }
+</style>

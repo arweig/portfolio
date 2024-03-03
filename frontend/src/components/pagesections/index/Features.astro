@@ -1,0 +1,50 @@
+---
+import Title from "../../global/titles/Title.astro";
+import Feature from '../../global/cards/Feature.astro';
+---
+
+<section id="features">
+  <div class="container">
+    <Title text="Work with me" />
+    <div class="feature-container">
+      <Feature title="Adaptable" description="Navigates diverse situations to demonstrate flexibility, openness to change, and an ability to learn and collaborate across various environments."/>
+      <Feature title="Efficient" description="Maximizes productivity and minimizes redundancies to deliver high-quality code."/>
+      <Feature title="Passionate" description="Exhibits a genuine enthusiasm for coding, innovative problem-solving and technology."/>
+      <Feature title="Detail-oriented" description="Ensures precision and accuracy in work by attending to every aspect of a project."/>
+      <Feature title="Collaborative" description="Works towards achieving shared goals by contributing ideas and fostering a positive group dynamic."/>
+      <Feature title="Perpetual Learner" description="Embraces a lifelong commitment to learning by staying current with evolving technologies."/>
+    </div>
+  </div>
+</section>
+
+<style>
+  #features {
+    
+  }
+  
+  #features .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  @media screen and (max-width: 800px) {
+    .feature-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .feature-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,72 @@
+---
+import Title from "../../global/titles/Title.astro";
+import Icon from '../../../components/global/flair/Icon.astro';
+import Project from '../../../components/global/cards/Project.astro';
+---
+
+<section id="projects">
+  <div class="container">
+    <div id="title-container">
+      <Title text="Projects" />
+      <div class="filters">
+        <i class="fa-solid fa-filter"></i>
+        <button>all</button>
+        <button>fe</button>
+        <button>full</button>
+        <button>be</button>
+      </div>
+    </div>
+    <div id="projects-container">
+      <Project 
+        title="project 1" 
+        description="Description gjeklg rjgeior gjkiorg kerop." 
+      />
+      <Project 
+        title="project 2" 
+        description="Description gjeklg rjgeior gjkiorg kerop ghui ghreuig rehuig heruig ejgilioj gerigojr geiojg jigero." 
+      />
+      <Project 
+        title="project 3" 
+        description="Description gjeklg rjgeior gjkiorg kerop." 
+      />
+      <Project 
+        title="project 4" 
+        description="Description gjeklg rjgeior gjkiorg kerop." 
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  #projects .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #title-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 2px;
+  }
+  #projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #projects-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
