@@ -1,0 +1,60 @@
+<div id="toggle">
+  <i id="sun" class="fa-solid fa-sun"></i>
+  <i id="moon" class="fa-solid fa-moon"></i>
+</div>
+
+<style>
+  i {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+
+  i:hover {
+    transform: rotate(12deg);
+    transition: .1s;
+  }
+
+</style>
+
+<script is:inline>
+  const moonIcon = document.getElementById('moon');
+  const sunIcon = document.getElementById('sun');
+  const body = document.body;
+
+  function setMode() {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    if (prefersDarkMode.matches || localStorage.getItem('mode') === 'dark') {
+      body.classList.remove('light');
+      body.classList.add('dark');
+      sunIcon.style.display = 'inline-block';
+      moonIcon.style.display = 'none';
+    } else {
+      body.classList.remove('dark');
+      body.classList.add('light');
+      moonIcon.style.display = 'inline-block';
+      sunIcon.style.display = 'none';
+    }
+  }
+
+  function toggleMode() {
+    if (body.classList.contains('light')) {
+      body.classList.remove('light');
+      body.classList.add('dark');
+      sunIcon.style.display = 'inline-block';
+      moonIcon.style.display = 'none';
+      localStorage.setItem('mode', 'dark');
+    } else {
+      body.classList.remove('dark');
+      body.classList.add('light');
+      moonIcon.style.display = 'inline-block';
+      sunIcon.style.display = 'none';
+      localStorage.setItem('mode', 'light');
+    }
+  }
+
+  moonIcon.addEventListener('click', toggleMode);
+  sunIcon.addEventListener('click', toggleMode);
+
+  setMode();
+</script>

@@ -1,0 +1,27 @@
+/* ---------- light mode ----------- */
+body.light {
+	--mode-background: rgb(246, 246, 246);
+	--mode-background-shade: rgb(246, 246, 246);
+	--mode-body: rgb(97, 81, 158);
+	--mode-body-shade: rgb(91, 88, 88);
+	--mode-accent-hotpink: rgb(245, 77, 144);
+	--mode-accent-green: rgb(237, 255, 121);
+	--mode-accent-blue: rgb(137, 142, 200);
+	--mode-accent-orange: rgb(255, 225, 170);
+	--mode-gradient: linear-gradient(45deg, var(--mode-accent-blue), var(--mode-accent-green) 60%);
+	--mode-border: 1px solid rgb(216, 216, 216);
+}
+
+/* ----------- dark mode ----------- */
+body.dark {
+	--mode-background: rgb(35, 39, 30);
+	--mode-background-shade: rgb(61, 68, 53);
+	--mode-body: rgb(219, 251, 116);
+	--mode-body-shade: rgb(77, 84, 54);
+	--mode-accent-hotpink: rgb(167, 85, 119);
+	--mode-accent-green: rgb(237, 255, 121);
+	--mode-accent-blue: rgb(137, 142, 200);
+	--mode-accent-orange: rgb(51, 50, 54);
+	--mode-gradient: linear-gradient(45deg, var(--red), var(--orange) 60%);
+	--mode-border: 1px solid rgb(64, 64, 64);
+}

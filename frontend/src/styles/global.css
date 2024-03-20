@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=IBM+Plex+Mono&family=Rock+3D&family=Russo+One&display=swap');
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--mode-body);
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		font-family: 'Poppins';
+		background-color: var(--mode-background);
+	}
+
+	main {
+		flex-grow: 1;
+	}
+
+	.container {
+		display: block;
+		max-width: 1000px;
+		margin: auto;
+		padding: 80px 30px;
+	}
+
+	h2 {
+		font-family: 'IBM Plex Mono';
+		font-size: 34px;
+	}
+
+	input, button {
+		padding: 10px 14px;
+		border-radius: 24px;
+		border: 0;
+	}
+
+	input:focus {
+		outline: 0;
+	}
+
+	button:hover, #submit:hover {
+		border: 0;
+		background-color: black;
+    color: white;
+    transition: .3s;
+	}

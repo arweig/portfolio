@@ -1,18 +1,50 @@
 ---
-import Icon from '../../../components/global/flair/Icon.astro';
 import Link from '../../global/interactive/Link.astro';
 ---
 <section id="hero">
   <div class="container">
+    <div id="text" data-text="I build and maintain software applications."></div>
+    <p>I'm Alyssa,</p>
     <h2>I build and maintain software applications.</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nesciunt sunt quod rem at voluptate odio a aliquam aspernatur eligendi!</p>
-    <Link href="#projects" text="See my work" style="secondary-btn" />
+    <div class="btn-container">
+      <figure>
+        <a href="#about">
+          <i id="icon-about" class="fa-solid fa-fingerprint"></i>
+          <figcaption>About</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="#projects">
+          <i id="icon-projects" class="fa-solid fa-folder"></i>
+          <figcaption>Projects</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="http://github.com/arweig" target="_blank">
+          <i id="icon-github" class="fa-brands fa-github"></i>
+          <figcaption>GitHub</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="http://linkedin.com/in/arweig" target="_blank">
+          <i id="icon-linkedin" class="fa-brands fa-linkedin-in"></i>
+          <figcaption>LinkedIn</figcaption>
+        </a>
+      </figure>
+      <figure>
+        <a href="mailto:weigleina@gmail.com">
+          <i id="icon-email" class="fa-solid fa-at"></i>
+          <figcaption>Email</figcaption>
+        </a>
+      </figure>
+    </div>
   </div>  
 </section>
 
 <style>
   #hero {
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 170px);
     display: flex;
     flex-direction: column;
   }
@@ -20,8 +52,65 @@ import Link from '../../global/interactive/Link.astro';
   #hero .container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 22px;
     width: 100%;
     align-items: flex-start;
+  }
+
+  h2 {
+    max-width: 500px;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  #icon-about {
+    color: var(--mode-body);
+    background-color: var(--mode-background);
+    font-size: 48px;
+  }
+
+  #icon-github, #icon-email {
+    color: var(--mode-body);
+    background-color: var(--mode-background);
+    font-size: 52px;
+  }
+
+  #icon-about:hover, #icon-github:hover, #icon-email:hover {
+    color: rgb(220, 59, 86);
+  }
+
+  i {
+    font-size: 30px;
+    background-color: var(--mode-body);
+    color: var(--mode-background);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+
+  i:hover {
+    background-color: rgb(220, 59, 86);
   }
 </style>

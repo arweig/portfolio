@@ -1,6 +1,5 @@
 ---
 import Title from "../../global/titles/Title.astro";
-import Icon from '../../../components/global/flair/Icon.astro';
 import Project from '../../../components/global/cards/Project.astro';
 ---
 
@@ -10,29 +9,37 @@ import Project from '../../../components/global/cards/Project.astro';
       <Title text="Projects" />
       <div class="filters">
         <i class="fa-solid fa-filter"></i>
-        <button>all</button>
-        <button>fe</button>
-        <button>full</button>
-        <button>be</button>
+        <button class="filter-btn active" id="all">All</button>
+        <button class="filter-btn" id="front">front</button>
+        <button class="filter-btn" id="back">back</button>
+        <button class="filter-btn" id="full">full</button>
       </div>
     </div>
     <div id="projects-container">
-      <Project 
-        title="project 1" 
-        description="Description gjeklg rjgeior gjkiorg kerop." 
-      />
-      <Project 
-        title="project 2" 
-        description="Description gjeklg rjgeior gjkiorg kerop ghui ghreuig rehuig heruig ejgilioj gerigojr geiojg jigero." 
-      />
-      <Project 
-        title="project 3" 
-        description="Description gjeklg rjgeior gjkiorg kerop." 
-      />
-      <Project 
-        title="project 4" 
-        description="Description gjeklg rjgeior gjkiorg kerop." 
-      />
+      <div class="item front">
+        <Project 
+          title="Frontend project" 
+          description="Description gjeklg rjgeior gjkiorg kerop." 
+        />
+      </div>
+      <div class="item back">
+        <Project 
+          title="Backend project" 
+          description="Description gjeklg rjgeior gjkiorg kerop ghui ghreuig rehuig heruig ejgilioj gerigojr geiojg jigero." 
+        />
+      </div>
+      <div class="item front">
+        <Project 
+          title="Frontend project" 
+          description="Description gjeklg rjgeior gjkiorg kerop." 
+        />
+      </div>
+      <div class="item full">
+        <Project 
+          title="Fullstack project" 
+          description="Description gjeklg rjgeior gjkiorg kerop." 
+        />
+      </div>
     </div>
   </div>
 </section>
@@ -63,6 +70,11 @@ import Project from '../../../components/global/cards/Project.astro';
     grid-row-gap: 30px;
   }
 
+
+  .active {
+    background-color: var(--mode-body);
+    color: var(--mode-background);
+  }
   @media screen and (max-width: 800px) {
     #projects-container {
       display: grid;
@@ -70,3 +82,35 @@ import Project from '../../../components/global/cards/Project.astro';
     }
   }
 </style>
+<script>
+  filterSelection("all");
+
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("item");
+    if (c == "all") {
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "block";
+      }
+      return;
+    }
+    for (i = 0; i < x.length; i++) {
+      if (x[i].classList.contains(c)) {
+        x[i].style.display = "block";
+      } else {
+        x[i].style.display = "none";
+      }
+    }
+  }
+
+  var btnContainer = document.querySelector(".filters");
+  var btns = btnContainer.getElementsByClassName("filter-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = btnContainer.querySelector(".active");
+      current.classList.remove("active");
+      this.classList.add("active");
+      filterSelection(this.id);
+    });
+  }
+</script>

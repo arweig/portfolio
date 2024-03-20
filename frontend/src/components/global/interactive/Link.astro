@@ -13,7 +13,7 @@ const { href, text, style } = Astro.props;
   a {
     text-decoration: none;
     display: inline-block;
-    color: black;
+    color: var(--mode-body);
   }
 
   .plain-text {
@@ -23,6 +23,7 @@ const { href, text, style } = Astro.props;
     background-color: rgb(232, 252, 131);
     padding: 10px 14px;
     border-radius: 24px;
+    color: var(--mode-background);
   }
 
   .primary-btn:hover {
@@ -32,7 +33,7 @@ const { href, text, style } = Astro.props;
   }
 
   .secondary-btn {
-    border: 1px solid black;
+    border: 1px solid var(--mode-body);
     padding: 10px 14px;
     border-radius: 24px;
   }

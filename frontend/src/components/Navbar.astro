@@ -1,15 +1,14 @@
 ---
 import Link from './global/interactive/Link.astro';
 import Logo from './global/flair/Logo.astro';
+import ToggleMode from './global/interactive/ToggleMode.astro';
 ---
 <div id="navbar">
   <div class="container">
     <Logo text="A" href="/" style=""/>
     <nav>
       <ul>
-        <li><i class="fa-solid fa-moon"></i></li>
-        <li><Link href="#about" style="plain-text" text="About" /></li>
-        <li><Link href="#projects" style="plain-text" text="Projects" /></li>
+        <li><ToggleMode /></li>
         <li><Link href="#contact" style="primary-btn" text="Contact" /></li>
       </ul>
     </nav>
@@ -24,7 +23,7 @@ import Logo from './global/flair/Logo.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 30px;
   }
 
   ul {

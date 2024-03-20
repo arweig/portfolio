@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+import '../styles/mode.css';
 import Navbar from '../components/Navbar.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
@@ -31,80 +33,6 @@ const { title } = Astro.props;
 	<Contact />
 	<Footer />
 </html>
-
-<style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Poppins&family=IBM+Plex+Mono&family=Rock+3D&family=Russo+One&display=swap');
-	
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0;
-		scroll-behavior: smooth;
-		scrollbar-width: thin;
-	}
-
-	*::-webkit-scrollbar-thumb {
-		background-color: #5a2dc3;
-	}
-	*::-webkit-scrollbar-track {
-		background-color: #f0f0f0;
-		border-left: 1px solid black;
-	}
-	::-webkit-scrollbar {
-		width: 8px;
-	}
-	::-webkit-scrollbar-thumb {
-		background-color: #5a2dc3;
-	}
-	::-webkit-scrollbar-track {
-		background-color: #f0f0f0;
-		border-left: 1px solid black;
-	}
-	body {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		overflow-y: scroll;
-		font-family: 'Poppins';
-		background-color: rgb(252, 252, 252);
-	}
-
-	main {
-		flex-grow: 1;
-	}
-
-	.container {
-		display: block;
-		max-width: 1000px;
-		margin: auto;
-		padding: 80px 30px;
-	}
-
-	h2 {
-		font-family: 'IBM Plex Mono';
-		font-size: 34px;
-	}
-
-	input, button {
-		padding: 10px 14px;
-		border-radius: 24px;
-		border: 0;
-	}
-
-	input:focus {
-		outline: 0;
-	}
-
-	button:hover, #submit:hover {
-		border: 0;
-		background-color: black;
-    color: white;
-    transition: .3s;
-	}
-
-</style>
 
 <!-- font awesome icons -->
 <script src="https://kit.fontawesome.com/67b26fcce6.js" crossorigin="anonymous"></script>
